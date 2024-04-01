@@ -36,11 +36,11 @@ __-a__ Permite listar los contenedores que esten ejecutándose o no en la máqui
 ---
 __Detener un contenedor y volver a iniciarlo__
 ```sh
-# docker container stop [CONTAINER_ID/CONTAINER_ID]
+# docker container stop [CONTAINER_NAME/CONTAINER_ID]
 docker container stop proxy-example
 docker container stop 9e6889d78182
 
-# docker container start [CONTAINER_ID/CONTAINER_ID]
+# docker container start [CONTAINER_NAME/CONTAINER_ID]
 docker container start proxy-example
 docker container start 9e6889d78182
 ``` 
@@ -48,11 +48,11 @@ docker container start 9e6889d78182
 ---
 __Detener un contenedor y eliminarlo__
 ```sh
-# docker container stop [CONTAINER_ID/CONTAINER_ID]
+# docker container stop [CONTAINER_NAME/CONTAINER_ID]
 docker container stop proxy-example
 docker container stop 9e6889d78182
 
-# docker container rm [CONTAINER_ID/CONTAINER_ID]
+# docker container rm [CONTAINER_NAME/CONTAINER_ID]
 docker container rm proxy-example
 docker container rm 9e6889d78182
 ``` 
@@ -60,12 +60,12 @@ docker container rm 9e6889d78182
 ---
 __Detener un contenedor y eliminarlo de forma forzada__
 ```sh
-# docker container  rm -f [CONTAINER_ID/CONTAINER_ID]
+# docker container  rm -f [CONTAINER_NAME/CONTAINER_ID]
 docker container rm -f proxy-example
 docker container rm -f 9e6889d78182
 ``` 
 ---
-__Mostrar un listado de la todas las impagenes__
+__Mostrar un listado de la todas las imágenes__
 ```sh
 docker images
 ```
@@ -78,7 +78,7 @@ docker image rm postgres:16.2
 docker image rm b9390dd1ea18
 ```  
 ---
-__Eliminar imagenes no usadas__
+__Eliminar imágenes no usadas__
 ```sh
 docker image prune -a
 ```  
